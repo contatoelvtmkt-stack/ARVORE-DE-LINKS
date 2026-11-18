@@ -207,26 +207,26 @@ body::before{
 /* ---------- DESKTOP (1200px+, pensado em 1920): banner em tela cheia + cards 2 por linha ---------- */
 @media (min-width:1200px){
   .page{max-width:none;margin:0;box-shadow:none;border:0;background:var(--bg)}
-  .hero{height:clamp(780px,92vh,980px)}
+  .hero{height:clamp(560px,62vh,700px)}
   .hero__bg{
     background:
       radial-gradient(38% 62% at 50% 42%,rgba(204,0,0,.6),rgba(204,0,0,0) 72%),
       url(../assets/img/textura-topo.webp) center/cover no-repeat;
   }
-  .hero__photo{width:clamp(700px,46vw,860px);bottom:110px;-webkit-mask-image:linear-gradient(180deg,#000 46%,transparent 78%);mask-image:linear-gradient(180deg,#000 46%,transparent 78%)}
-  .hero::after{height:440px}
-  .hero__brand{bottom:44px}
-  .hero__logo{width:380px}
-  .hero__tag{font-size:17px;margin-top:16px}
-  .float{width:72px;height:72px}
-  .float svg{width:34px;height:34px}
-  .float--1{left:calc(50% - 400px);top:26%}
-  .float--2{right:calc(50% - 420px);top:40%}
-  .float--3{left:calc(50% - 350px);top:56%;width:58px;height:58px}
-  .float--3 svg{width:27px;height:27px}
-  .welcome{padding:10px 48px 48px}
-  .pill{padding:22px 60px;font-size:30px}
-  .welcome p{font-size:19px;margin-top:20px}
+  .hero__photo{width:clamp(520px,58vh,620px);bottom:66px;-webkit-mask-image:linear-gradient(180deg,#000 46%,transparent 78%);mask-image:linear-gradient(180deg,#000 46%,transparent 78%)}
+  .hero::after{height:300px}
+  .hero__brand{bottom:24px}
+  .hero__logo{width:250px}
+  .hero__tag{font-size:14px;margin-top:10px}
+  .float{width:62px;height:62px}
+  .float svg{width:30px;height:30px}
+  .float--1{left:calc(50% - 340px);top:22%}
+  .float--2{right:calc(50% - 350px);top:38%}
+  .float--3{left:calc(50% - 290px);top:55%;width:50px;height:50px}
+  .float--3 svg{width:24px;height:24px}
+  .welcome{padding:6px 48px 36px}
+  .pill{padding:16px 48px;font-size:24px}
+  .welcome p{font-size:17px;margin-top:16px}
   .links{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1520px;margin:0 auto;padding:0 56px}
   .card,.card--main{min-height:300px}
   .card__img,.card--main .card__img{width:60%}
