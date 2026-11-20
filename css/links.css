@@ -53,11 +53,6 @@ body::before{
 }
 .hero__brand{position:relative;text-align:center}
 .hero__logo{width:230px;margin:0 auto;filter:drop-shadow(0 6px 24px rgba(0,0,0,.6))}
-.hero__tag{
-  margin-top:10px;font-weight:300;font-size:13px;letter-spacing:.2em;text-transform:uppercase;
-  color:rgba(229,229,229,.75);
-}
-.hero__tag b{font-weight:500;color:var(--red-hi)}
 
 
 /* ---------- BOAS-VINDAS ---------- */
@@ -178,7 +173,6 @@ body::before{
       url(../assets/img/textura-topo.webp) center/cover no-repeat;
   }
   .hero__logo{width:280px}
-  .hero__tag{font-size:14px;margin-top:10px}
   .welcome{padding:6px 48px 32px}
   .pill{padding:16px 48px;font-size:24px}
   .welcome p{font-size:17px;margin-top:16px}
