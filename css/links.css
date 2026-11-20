@@ -132,8 +132,8 @@ body::before{
 
 /* celular: Isaac mais à direita e sem escurecer o rosto */
 @media (max-width:767px){
-  .card--site .card__img{width:56%;background-size:auto 136%;background-position:100% 18%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 32%);mask-image:linear-gradient(90deg,transparent 0%,#000 32%)}
-  .card--site::after{background:radial-gradient(60% 90% at 85% 40%,rgba(204,0,0,.22),rgba(204,0,0,0) 70%),linear-gradient(90deg,var(--card) 40%,rgba(31,31,31,.35) 52%,rgba(31,31,31,0) 62%)}
+  .card--site .card__img{width:50%;background-size:auto 136%;background-position:right -34px top 18%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%);mask-image:linear-gradient(90deg,transparent 0%,#000 30%)}
+  .card--site::after{background:radial-gradient(60% 90% at 85% 40%,rgba(204,0,0,.22),rgba(204,0,0,0) 70%),linear-gradient(90deg,var(--card) 46%,rgba(31,31,31,.35) 56%,rgba(31,31,31,0) 66%)}
 }
 
 @media (hover:hover){
@@ -157,7 +157,7 @@ body::before{
   .card__title{font-size:19px}
   .card__title strong{font-size:22px}
   .card--main .card__title strong{font-size:25px}
-  .card--site .card__img{width:50%}
+  .card--site .card__img{width:46%}
 }
 
 /* ---------- TABLET (768–1199px): coluna única maior ---------- */
