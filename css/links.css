@@ -123,17 +123,18 @@ body::before{
 @keyframes spin{to{--a:360deg}}
 
 /* card do site: Isaac recortado à direita */
-.card--site{min-height:200px;border-color:rgba(204,0,0,.35);background:#141414}
-.card--site::after{display:none}
-.card--site .card__img{
-  left:auto;right:0;top:50%;bottom:auto;width:52%;height:260px;margin-top:-130px;
-  background-size:840px auto;background-position:left -326px top -105px;
-  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 22%);mask-image:linear-gradient(90deg,transparent 0%,#000 22%);
-}
+.card--site{min-height:190px;border-color:rgba(204,0,0,.35);background:radial-gradient(45% 85% at 84% 45%,rgba(204,0,0,.32),rgba(204,0,0,0) 70%),var(--card)}
+.card--site .card__img{width:60%;background-size:auto 136%;background-position:100% 18%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 30%,#000 62%);mask-image:linear-gradient(90deg,transparent 0%,transparent 30%,#000 62%)}
+.card--site::after{background:linear-gradient(90deg,var(--card) 30%,rgba(31,31,31,.35) 45%,rgba(31,31,31,0) 56%)}
 .card--site .card__icon svg{fill:none;stroke:#fff}
 .card__sub{display:block;margin-top:8px;font-weight:300;font-size:12.5px;line-height:1.4;color:rgba(229,229,229,.7);max-width:190px}
 .card__sub b{display:block;font-weight:500;color:var(--text)}
 
+/* celular: Isaac mais à direita e sem escurecer o rosto */
+@media (max-width:767px){
+  .card--site .card__img{width:50%;background-size:auto 136%;background-position:right -34px top 18%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%);mask-image:linear-gradient(90deg,transparent 0%,#000 30%)}
+  .card--site::after{background:linear-gradient(90deg,var(--card) 46%,rgba(31,31,31,.35) 54%,rgba(31,31,31,0) 60%)}
+}
 
 @media (hover:hover){
   .card:hover{border-color:rgba(204,0,0,.9);transform:translateY(-3px);box-shadow:0 16px 40px rgba(204,0,0,.18)}
@@ -156,6 +157,7 @@ body::before{
   .card__title{font-size:19px}
   .card__title strong{font-size:22px}
   .card--main .card__title strong{font-size:25px}
+  .card--site .card__img{width:46%}
 }
 
 /* ---------- TABLET (768–1199px): coluna única maior ---------- */
@@ -168,7 +170,6 @@ body::before{
   .card__body{padding:26px 28px;max-width:68%}
   .card--main{min-height:240px}
   .card--site{min-height:240px}
-  .card--site .card__img{width:56%;height:300px;margin-top:-150px;background-size:1100px auto;background-position:left -400px top -158px}
   .card__sub{font-size:14px;max-width:260px}
 }
 
@@ -196,9 +197,8 @@ body::before{
   .btn,.card--main .btn{margin-top:24px;padding:15px 22px;font-size:13.5px}
   .btn svg{width:16px;height:16px}
   .card--site{grid-column:1/-1;min-height:320px}
-  .card--site .card__img{width:780px;height:100%;top:0;margin-top:0;background-size:1240px auto;background-position:right -154px center;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 6%);mask-image:linear-gradient(90deg,transparent 0%,#000 6%)}
+  .card--site .card__img{width:46%;background-size:auto 135%;background-position:85% 6%}
   .card--site .card__body{max-width:50%}
-  .card--site .card__sub{display:none}
   .card__sub{font-size:18px;max-width:420px;margin-top:12px}
   .foot{padding:72px 48px 56px}
     .foot__logo{width:150px}
