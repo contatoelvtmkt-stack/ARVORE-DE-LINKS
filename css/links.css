@@ -122,6 +122,14 @@ body::before{
 @property --a{syntax:'<angle>';inherits:false;initial-value:0deg}
 @keyframes spin{to{--a:360deg}}
 
+/* card do site: Isaac recortado à direita */
+.card--site{min-height:190px;border-color:rgba(204,0,0,.35)}
+.card--site .card__img{width:60%;background-size:auto 128%;background-position:100% 8%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 30%,#000 62%);mask-image:linear-gradient(90deg,transparent 0%,transparent 30%,#000 62%)}
+.card--site::after{background:radial-gradient(70% 90% at 85% 40%,rgba(204,0,0,.28),rgba(204,0,0,0) 70%),linear-gradient(90deg,var(--card) 30%,rgba(31,31,31,.4) 62%,rgba(31,31,31,0) 100%)}
+.card--site .card__icon svg{fill:none;stroke:#fff}
+.card__sub{display:block;margin-top:8px;font-weight:300;font-size:12.5px;line-height:1.4;color:rgba(229,229,229,.7);max-width:190px}
+.card__sub b{display:block;font-weight:500;color:var(--text)}
+
 @media (hover:hover){
   .card:hover{border-color:rgba(204,0,0,.9);transform:translateY(-3px);box-shadow:0 16px 40px rgba(204,0,0,.18)}
   .card:hover .card__img{transform:scale(1.06)}
@@ -132,13 +140,6 @@ body::before{
 
 /* ---------- RODAPÉ ---------- */
 .foot{text-align:center;padding:40px 20px 34px}
-.foot__site{
-  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:0;
-  border:1px solid rgba(229,229,229,.22);font-size:13px;font-weight:400;letter-spacing:.06em;
-  transition:border-color .3s ease,color .3s ease;
-}
-.foot__site svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.foot__site:hover{border-color:var(--red-hi);color:#fff}
 .foot__logo{width:110px;margin:28px auto 12px;opacity:.9}
 .foot small{display:block;font-weight:300;font-size:11px;letter-spacing:.08em;color:rgba(229,229,229,.45)}
 
@@ -161,6 +162,8 @@ body::before{
   .card{min-height:200px}
   .card__body{padding:26px 28px;max-width:68%}
   .card--main{min-height:240px}
+  .card--site{min-height:240px}
+  .card__sub{font-size:14px;max-width:260px}
 }
 
 /* ---------- DESKTOP (1200px+, pensado em 1920): banner em tela cheia + cards 2 por linha ---------- */
@@ -186,9 +189,12 @@ body::before{
   .card__title strong,.card--main .card__title strong{font-size:44px}
   .btn,.card--main .btn{margin-top:24px;padding:15px 22px;font-size:13.5px}
   .btn svg{width:16px;height:16px}
+  .card--site{grid-column:1/-1;min-height:320px}
+  .card--site .card__img{width:46%;background-size:auto 135%;background-position:85% 6%}
+  .card--site .card__body{max-width:50%}
+  .card__sub{font-size:18px;max-width:420px;margin-top:12px}
   .foot{padding:72px 48px 56px}
-  .foot__site{font-size:16px;padding:16px 30px}
-  .foot__logo{width:150px}
+    .foot__logo{width:150px}
 }
 
 @media (prefers-reduced-motion:reduce){
